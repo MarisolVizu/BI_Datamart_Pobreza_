@@ -41,7 +41,7 @@ Dim_provincia
 
 Dim_sexo
 - ID_SEXO (int, auto–generado): Identificador único.
-- SEXO (bit): Valor binario (0 = hombre, 1 = mujer).
+- SEXO (nvarchar(6)): Hombre o mujer.
 
 Dim_estadoCivil
 - ID_ESTADOCIVIL (int, auto–generado): Identificador único.
@@ -78,9 +78,9 @@ Dim_educacion
 
 Dim_salud
 - ID_SALUD (int, auto–generado): Identificador único.
-- ACUDIO_ESSALUD (bit): Acudió a ESSALUD.
-- ACUDIO_CLINICA_PARTICULAR (bit): Acudió a una clínica en particular.
-- TIENE_SEGURO (bit): Cobertura de seguro médico.
+- ACUDIO_ESSALUD (nvarchar(2)): Acudió a ESSALUD o no (si o no).
+- ACUDIO_CLINICA_PARTICULAR (nvarchar(10)): Acudió a clínica en particular o no (si o no).
+- TIENE_SEGURO (nvarchar(10)): Cobertura de seguro médico (si o no).
 
 Dim_enfermedad
 - ID_ENFERMEDAD (int, auto–generado): Identificador único.
