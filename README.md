@@ -79,8 +79,8 @@ Dim_educacion
 Dim_salud
 - ID_SALUD (int, auto–generado): Identificador único.
 - ACUDIO_ESSALUD (nvarchar(2)): Acudió a ESSALUD o no (si o no).
-- ACUDIO_CLINICA_PARTICULAR (nvarchar(10)): Acudió a clínica en particular o no (si o no).
-- TIENE_SEGURO (nvarchar(10)): Cobertura de seguro médico (si o no).
+- ACUDIO_CLINICA_PARTICULAR (nvarchar(2)): Acudió a clínica en particular o no (si o no).
+- TIENE_SEGURO (nvarchar(2)): Cobertura de seguro médico (si o no).
 
 Dim_enfermedad
 - ID_ENFERMEDAD (int, auto–generado): Identificador único.
