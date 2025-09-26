@@ -1,3 +1,3 @@
 # BI_Datamart_Pobreza_
 
-bjibk
+Proyecto apra el curso de Business Intelligence 2025-02.
