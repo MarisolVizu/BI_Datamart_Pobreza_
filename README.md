@@ -63,7 +63,7 @@ La selección de variables responde a las recomendaciones de la **Comisión Econ
 
 Este modelo dimensional sigue un **esquema en estrella**, compuesto por una tabla de hechos y múltiples tablas de dimensiones.
 
-> **Nota:** Todos los identificadores (ID_) de las 18 dimensiones son generados automáticamente (auto-incrementales). Estos campos funcionan como claves primarias y permiten establecer relaciones consistentes con la tabla de hechos.
+> **Nota:** Todos los identificadores (ID_) de las 13 dimensiones son generados automáticamente (auto-incrementales). Estos campos funcionan como claves primarias y permiten establecer relaciones consistentes con la tabla de hechos.
 
 ### Tabla de Hechos: Fact_Pobreza
 
@@ -87,118 +87,91 @@ Contiene los indicadores cuantitativos principales asociados a cada jefe de hoga
 ### Dimensiones
 
 #### Dim_departamento
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_DEPARTAMENTO | int | Identificador único (auto-generado) |
-| DEPARTAMENTO | nvarchar(20) | Nombre del departamento |
-| UBIGEO_DEPARTAMENTO | nvarchar(2) | Código ubigeo |
-
-#### Dim_provincia
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_PROVINCIA | int | Identificador único (auto-generado) |
-| PROVINCIA | nvarchar(30) | Nombre de la provincia |
-| UBIGEO_PROVINCIA | nvarchar(4) | Código ubigeo |
-
-#### Dim_sexo
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_SEXO | int | Identificador único (auto-generado) |
-| SEXO | nvarchar(6) | Hombre o Mujer |
-
-#### Dim_estadoCivil
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_ESTADOCIVIL | int | Identificador único (auto-generado) |
-| ESTADO_CIVIL | nvarchar(15) | Estado civil |
-
-#### Dim_tipoTrabajador
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_TIPO_TRABAJADOR | int | Identificador único (auto-generado) |
-| TIPO_TRABAJADOR | nvarchar(20) | Clasificación laboral |
-
-#### Dim_tipoContrato
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_TIPO_CONTRATO | int | Identificador único (auto-generado) |
-| TIPO_CONTRATO | nvarchar(15) | Tipo de contrato |
-
-#### Dim_vivienda
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_VIVIENDA | int | Identificador único (auto-generado) |
-| TIPO_VIVIENDA | nvarchar(35) | Clasificación de la vivienda |
-
-#### Dim_materialPisos
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_MATERIAL_PISOS | int | Identificador único (auto-generado) |
-| MATERIAL_PISOS | nvarchar(35) | Material predominante en los pisos |
+| Campo    | Tipo         | Descripción                                 |
+|----------|--------------|---------------------------------------------|
+| ID_SEXO  | int          | Identificador único (auto–generado)         |
+| SEXO     | nvarchar(10) | Hombre o Mujer                               |
 
 #### Dim_materialTechos
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_MATERIAL_TECHOS | int | Identificador único (auto-generado) |
-| MATERIAL_TECHOS | nvarchar(50) | Material predominante en los techos |
+| Campo               | Tipo         | Descripción                         |
+|---------------------|--------------|-------------------------------------|
+| ID_MATERIAL_TECHOS  | int          | Identificador único (auto–generado) |
+| MATERIAL_TECHOS     | nvarchar(50) | Tipo de material del techo          |
+
+#### Dim_materialPisos
+| Campo              | Tipo         | Descripción                         |
+|--------------------|--------------|-------------------------------------|
+| ID_MATERIAL_PISOS  | int          | Identificador único (auto–generado) |
+| MATERIAL_PISOS     | nvarchar(35) | Tipo de material del piso           |
 
 #### Dim_materialParedes
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_MATERIAL_PAREDES | int | Identificador único (auto-generado) |
-| MATERIAL_PAREDES | nvarchar(40) | Material predominante en las paredes |
-
-#### Dim_educacion
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_EDUCACION | int | Identificador único (auto-generado) |
-| NIÑOS_ASISTEN_COLEGIO | nvarchar(10) | Asistencia escolar de niños |
-| NIVEL_EDUCATIVO | nvarchar(36) | Nivel educativo alcanzado |
-
-#### Dim_salud
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_SALUD | int | Identificador único (auto-generado) |
-| ACUDIO_ESSALUD | nvarchar(2) | Acudió a ESSALUD (sí/no) |
-| ACUDIO_CLINICA_PARTICULAR | nvarchar(2) | Acudió a clínica particular (sí/no) |
-| TIENE_SEGURO | nvarchar(2) | Cobertura de seguro médico (sí/no) |
-
-#### Dim_enfermedad
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_ENFERMEDAD | int | Identificador único (auto-generado) |
-| ENFERMEDAD | nvarchar(28) | Tipo de enfermedad o condición reportada |
-
-#### Dim_programasSociales
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_PROGRAMA | int | Identificador único (auto-generado) |
-| RECIBIO | nvarchar(10) | Programa del que recibió ayuda (Pensión 65 o Juntos) |
-
-#### Dim_serviciosBasicos
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_SERVICIOS | int | Identificador único (auto-generado) |
-| SERVICIOS_BASICOS | nvarchar(20) | Tipo de servicio básico (agua, electricidad, internet, etc.) |
+| Campo                | Tipo         | Descripción                         |
+|----------------------|--------------|-------------------------------------|
+| ID_MATERIAL_PAREDES  | int          | Identificador único (auto–generado) |
+| MATERIAL_PAREDES     | nvarchar(50) | Tipo de material de paredes         |
 
 #### Dim_estratoSocial
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_ESTRATOSOCIAL | int | Identificador único (auto-generado) |
-| ESTRATO_SOCIAL | nvarchar(10) | Clasificación socioeconómica (A, B, C, D, E o Rural) |
+| Campo             | Tipo        | Descripción                         |
+|-------------------|-------------|-------------------------------------|
+| ID_ESTRATO_SOCIAL | int         | Identificador único (auto–generado) |
+| ESTRATO_SOCIAL    | nvarchar(5) | Estrato socioeconómico              |
+
+#### Dim_salud
+| Campo        | Tipo        | Descripción                         |
+|--------------|-------------|-------------------------------------|
+| ID_SALUD     | int         | Identificador único (auto–generado) |
+| TIENE_SEGURO | nvarchar(2) | Sí / No                             |
+
+#### Dim_tipoContrato
+| Campo             | Tipo         | Descripción                         |
+|-------------------|--------------|-------------------------------------|
+| ID_TIPO_CONTRATO  | int          | Identificador único (auto–generado) |
+| TIPO_CONTRATO     | nvarchar(15) | Tipo de contrato laboral            |
+
+#### Dim_programasSociales
+| Campo        | Tipo         | Descripción                         |
+|--------------|--------------|-------------------------------------|
+| ID_PROGRAMA  | int          | Identificador único (auto–generado) |
+| RECIBIO      | nvarchar(10) | Sí / No     |
+
+#### Dim_educacionHijos
+| Campo                        | Tipo          | Descripción                         |
+|------------------------------|---------------|-------------------------------------|
+| ID_EDUCACION                 | int           | Identificador único (auto–generado) |
+| NINOS_ASISTEN_COLEGIO        | nvarchar(10)  | Sí / No                             |
+| SITUACION_EDUCATIVA_ESPERADA | nvarchar(40)  | Situación educativa esperada        |
+
+#### Dim_serviciosBasicos
+| Campo            | Tipo         | Descripción                         |
+|------------------|--------------|-------------------------------------|
+| ID_SERVICIOS     | int          | Identificador único (auto–generado) |
+| SERVICIOS_BASICOS| nvarchar(20) | Sí / No             |
 
 #### Dim_nivelPobreza
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_POBREZA | int | Identificador único (auto-generado) |
-| POBREZA | nvarchar(20) | Categoría de pobreza (pobre, pobre extremo, no pobre) |
+| Campo       | Tipo         | Descripción                         |
+|-------------|--------------|-------------------------------------|
+| ID_POBREZA  | int          | Identificador único (auto–generado) |
+| POBREZA     | nvarchar(20) | Nivel de pobreza                    |
+
+#### Dim_locacion
+| Campo        | Tipo         | Descripción                         |
+|--------------|--------------|-------------------------------------|
+| ID_UBICACION | int          | Identificador único (auto–generado) |
+| UBIGEO       | nvarchar(20) | Código UBIGEO                       |
+| DEPARTAMENTO | nvarchar(20) | Nombre del departamento             |
+| PROVINCIA    | nvarchar(50) | Nombre de la provincia              |
 
 #### Dim_tiempo
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| ID_TIEMPO | int | Identificador único (auto-generado) |
-| AÑO | int | Año de la encuesta |
-| MES | int | Mes de la encuesta |
+| Campo       | Tipo         | Descripción                         |
+|-------------|--------------|-------------------------------------|
+| ID_TIEMPO   | int          | Identificador único (auto–generado) |
+| FECHA       | date         | Fecha completa                      |
+| ANIO        | int          | Año                                 |
+| MES         | int          | Mes                                 |
+| TRIMESTRE   | int          | Trimestre                           |
+| SEMESTRE    | int          | Semestre                            |
+| MES_NOMBRE  | nvarchar(20) | Nombre del mes                      |
+
 
 ---
 
