@@ -40,7 +40,7 @@ En el presente proyecto, la "empresa" objeto de análisis corresponde al **Estad
 Actualmente, se evidencia una problemática estructural en el proceso de focalización de la pobreza. El SISFOH continúa sustentándose principalmente en indicadores monetarios y de patrimonio, lo que genera errores tanto de exclusión como de inclusión indebida en la entrega de subsidios. En consecuencia, existen hogares pobres que quedan fuera de la cobertura de programas sociales, mientras que otros, no necesariamente en situación de pobreza, acceden a dichos beneficios (ComexPerú, 2024; MIDIS, 2020).
 
 ### Solución Propuesta
-La creación de un **datamart temático sobre pobreza multidimensional** se plantea como una estrategia clave para mejorar la calidad de la información disponible en la formulación y evaluación de políticas públicas. El diseño permitirá integrar de manera estructurada las distintas dimensiones de la ENAHO y generar perfiles más completos de los hogares.
+La creación de un **datamart temático sobre pobreza multidimensional** se plantea como una estrategia clave para mejorar la calidad de la información disponible en la formulación y evaluación de políticas públicas. El diseño permitirá la identificación de niveles de pobreza teniendo en cuenta los indicadores internacionales de CEPAL y analizarlos con respecto a la clasificación de pobreza según el SISFOH.
 
 ---
 
@@ -51,9 +51,9 @@ La selección de variables responde a las recomendaciones de la **Comisión Econ
 | Dimensión | Variables |
 |-----------|-----------|
 | **Vivienda** | Material de paredes, Material de pisos, Material de techos, Electricidad, Número de habitaciones, Internet |
-| **Salud** | Agua potable, Servicios higiénicos, Seguro médico |
-| **Educación** | Niños asisten al colegio, Situación educativa esperada, Sabe leer o escribir |
-| **Economía** | Tipo de trabajador, Ingreso total, Recibió ayuda del programa Pensión 65, Recibió ayuda del programa Juntos, Monto recibido del programa Pensión 65, Monto recibido del programa Juntos |
+| **Salud** | Servicios básicos, Seguro médico |
+| **Educación** | Niños asisten al colegio, Situación educativa esperada |
+| **Economía** | Tipo de trabajador, Ingreso total, Recibió ayuda del programa Pensión 65 o Juntos, Monto recibido del programa Pensión 65, Monto recibido del programa Juntos |
 
 > **Nota:** La unidad de análisis corresponde a los **jefes de hogar** en el periodo comprendido entre **2014 y 2024**.
 
